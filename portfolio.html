@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - TechHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-rocket me-2"></i>TechHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="portfolio.html">Портфолио</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Блог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero секция -->
+    <section class="hero text-white text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Наши проекты</h1>
+            <p class="lead">Реализованные решения для наших клиентов</p>
+        </div>
+    </section>
+
+    <!-- Фильтры -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+                <button class="btn btn-primary active" data-filter="all">Все проекты</button>
+                <button class="btn btn-outline-primary" data-filter="web">Веб-разработка</button>
+                <button class="btn btn-outline-primary" data-filter="mobile">Мобильные</button>
+                <button class="btn btn-outline-primary" data-filter="ai">AI/ML</button>
+                <button class="btn btn-outline-primary" data-filter="cloud">Облако</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 project-item" data-category="web">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="E-commerce платформа">
+                        <div class="card-body">
+                            <h5>E-commerce платформа</h5>
+                            <p class="text-muted">Современный интернет-магазин с AI-рекомендациями и системой управления запасами</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">React</span>
+                                <span class="badge bg-success me-1">Node.js</span>
+                                <span class="badge bg-info me-1">MongoDB</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 project-item" data-category="mobile">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Delivery App">
+                        <div class="card-body">
+                            <h5>Приложение доставки</h5>
+                            <p class="text-muted">Кроссплатформенное приложение для службы доставки с трекингом в реальном времени</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">React Native</span>
+                                <span class="badge bg-warning me-1">Firebase</span>
+                                <span class="badge bg-danger me-1">Maps API</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 project-item" data-category="ai">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="AI Assistant">
+                        <div class="card-body">
+                            <h5>AI ассистент</h5>
+                            <p class="text-muted">Интеллектуальный чат-бот для автоматизации поддержки клиентов</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">Python</span>
+                                <span class="badge bg-success me-1">TensorFlow</span>
+                                <span class="badge bg-info me-1">NLP</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 project-item" data-category="web">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="CRM система">
+                        <div class="card-body">
+                            <h5>CRM система</h5>
+                            <p class="text-muted">Комплексная система управления взаимоотношениями с клиентами</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">Vue.js</span>
+                                <span class="badge bg-success me-1">Django</span>
+                                <span class="badge bg-warning me-1">PostgreSQL</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 project-item" data-category="cloud">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Cloud Migration">
+                        <div class="card-body">
+                            <h5>Миграция в облако</h5>
+                            <p class="text-muted">Перенос инфраструктуры предприятия в AWS с оптимизацией затрат</p>
+                            <div class="mb-3">
+                                <span class="badge bg-warning me-1">AWS</span>
+                                <span class="badge bg-danger me-1">Docker</span>
+                                <span class="badge bg-info me-1">Kubernetes</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 project-item" data-category="mobile">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Fitness App">
+                        <div class="card-body">
+                            <h5>Фитнес приложение</h5>
+                            <p class="text-muted">Приложение для тренировок с трекером активности и соц-функциями</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">Flutter</span>
+                                <span class="badge bg-success me-1">HealthKit</span>
+                                <span class="badge bg-info me-1">Firebase</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <h2 class="display-4 text-primary">150+</h2>
+                    <p>Завершённых проектов</p>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="display-4 text-success">98%</h2>
+                    <p>Довольных клиентов</p>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="display-4 text-info">50+</h2>
+                    <p>Наград и сертификатов</p>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="display-4 text-warning">24/7</h2>
+                    <p>Поддержка клиентов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-rocket me-2"></i>TechHub</h5>
+                    <p class="text-muted">Ваш партнёр в цифровой трансформации</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="d-flex justify-content-end gap-3 mb-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-github fa-lg"></i></a>
+                    </div>
+                    <p class="text-muted mb-0">&copy; 2024 TechHub. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Фильтрация проектов
+        document.querySelectorAll('[data-filter]').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+                
+                // Обновляем активную кнопку
+                document.querySelectorAll('[data-filter]').forEach(btn => {
+                    btn.classList.remove('active', 'btn-primary');
+                    btn.classList.add('btn-outline-primary');
+                });
+                this.classList.remove('btn-outline-primary');
+                this.classList.add('active', 'btn-primary');
+                
+                // Фильтруем проекты
+                document.querySelectorAll('.project-item').forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

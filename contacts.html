@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - TechHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-rocket me-2"></i>TechHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Портфолио</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Блог</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero секция -->
+    <section class="hero text-white text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Свяжитесь с нами</h1>
+            <p class="lead">Готовы обсудить ваш проект? Мы всегда на связи!</p>
+        </div>
+    </section>
+
+    <!-- Контактная информация и форма -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Контактная информация</h5>
+                            <div class="mb-4">
+                                <i class="fas fa-map-marker-alt fa-2x text-primary mb-3"></i>
+                                <h6>Адрес</h6>
+                                <p class="text-muted">г. Москва, ул. Инновационная, д. 42<br>Бизнес-центр "Технопарк", офис 301</p>
+                            </div>
+                            <div class="mb-4">
+                                <i class="fas fa-phone fa-2x text-success mb-3"></i>
+                                <h6>Телефон</h6>
+                                <p class="text-muted">+7 (495) 123-45-67<br>+7 (800) 555-35-35 (бесплатно по России)</p>
+                            </div>
+                            <div class="mb-4">
+                                <i class="fas fa-envelope fa-2x text-info mb-3"></i>
+                                <h6>Email</h6>
+                                <p class="text-muted">info@techhub.ru<br>support@techhub.ru</p>
+                            </div>
+                            <div class="mb-4">
+                                <i class="fas fa-clock fa-2x text-warning mb-3"></i>
+                                <h6>Время работы</h6>
+                                <p class="text-muted">Пн-Пт: 9:00 - 18:00<br>Сб-Вс: выходной</p>
+                            </div>
+                            <div>
+                                <h6 class="mb-3">Социальные сети</h6>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="text-primary fs-4"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" class="text-info fs-4"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="text-primary fs-4"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" class="text-dark fs-4"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="text-danger fs-4"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-4">Отправить сообщение</h5>
+                            <form id="contactForm" onsubmit="return validateContactForm()">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Ваше имя *</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                        <div class="error-message text-danger mt-1" style="display: none;"></div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="company" class="form-label">Компания</label>
+                                        <input type="text" class="form-control" id="company">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="error-message text-danger mt-1" style="display: none;"></div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Телефон</label>
+                                        <input type="tel" class="form-control" id="phone">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="service" class="form-label">Интересующая услуга</label>
+                                    <select class="form-select" id="service">
+                                        <option value="">Выберите услугу</option>
+                                        <option value="web">Веб-разработка</option>
+                                        <option value="mobile">Мобильная разработка</option>
+                                        <option value="cloud">Облачные решения</option>
+                                        <option value="ai">AI/ML решения</option>
+                                        <option value="security">Кибербезопасность</option>
+                                        <option value="analytics">Аналитика данных</option>
+                                        <option value="other">Другое</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="budget" class="form-label">Бюджет проекта</label>
+                                    <select class="form-select" id="budget">
+                                        <option value="">Не указано</option>
+                                        <option value="small">До 500 тыс. руб.</option>
+                                        <option value="medium">500 тыс. - 1 млн руб.</option>
+                                        <option value="large">1 - 5 млн руб.</option>
+                                        <option value="enterprise">Более 5 млн руб.</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Сообщение *</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    <div class="error-message text-danger mt-1" style="display: none;"></div>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="privacy" required>
+                                    <label class="form-check-label" for="privacy">
+                                        Я согласен с <a href="#">политикой конфиденциальности</a> *
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Отправить сообщение
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карта -->
+    <section class="py-0">
+        <div class="container-fluid p-0">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.123456789!2d37.617494315616!3d55.755826380558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIxLjAiTiAzN8KwMzcnMDMuMCJF!5e0!3m2!1sru!2sru!4v1234567890"
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-rocket me-2"></i>TechHub</h5>
+                    <p class="text-muted">Ваш партнёр в цифровой трансформации</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="d-flex justify-content-end gap-3 mb-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-github fa-lg"></i></a>
+                    </div>
+                    <p class="text-muted mb-0">&copy; 2024 TechHub. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Дополнительная валидация для формы контактов
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (validateContactForm()) {
+                // Здесь можно добавить логику отправки формы
+                alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+                this.reset();
+            }
+        });
+    </script>
+</body>
+</html>
